@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+<link rel="stylesheet" href="css/styles.css">
+
+<h1>Из Цельсия в Фаренгейт</h1>
+
+<p>
+  <label>Цельсий</label>
+  <input id="inputCelsius" type="number" placeholder="Цельсий" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Фаренгейт: <span id="outputFahrenheit"></span></p>
+
+<script>
+function temperatureConverter(celstemprature) {
+    celstemprature = parseFloat(celstemprature);
+  document.getElementById("outputFahrenheit").innerHTML=(celstemprature*1.8)+32;
+}
+</script>
+
+<!-- <h2>Из Фаренгейта в Цельсий</h2>
+<p>
+  <label>Фаренгейт</label>
+  <input id="inputFahrenheit" type="number" placeholder="Фаренгейт" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Цельсий: <span id="outputCelcius"></span></p>
+
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+}
+</script> -->
+
+
+</body>
+</html>
